@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="event.js" defer></script>
+</head>
+<body>
+<h1>display: none vs opacity: 0 vs visibility: hidden</h1>
+<div>
+    <h2>Box</h2>
+    <div class="box" id="original-box">
+        original-box
+        <button class="child" id="child-original">Click Child</button>
+    </div>
+</div>
+<div>
+    <h2>Box 1 => display: none</h2>
+    <div class="box" id="display-none">
+        display-none
+        <button class="child" id="child-display">Click Child</button>
+    </div>
+</div>
+<div>
+    <h2>Box 2 => opacity: 0</h2>
+    <p>Click to see interactive ; hover a child element to see interactive</p>
+    <div class="box" id="opacity-0">
+        opacity-0
+        <button class="child" id="child-opacity">Click Child</button>
+    </div>
+</div>
+<div>
+    <h2>Box 3 => visibility: hidden</h2>
+    <div class="box" id="visibility-hidden">
+        visibility-hidden
+        <button class="child" id="child-visibility">Click Child</button>
+    </div>
+</div>
+<div>
+    <h2>Click Event Listener</h2>
+    <div id="clicked">
+
+    </div>
+</div>
+
+<div>
+    <h2>CSS Animation</h2>
+    <div class="container">
+        <div class="block">
+            <div>display ===></div>
+            <div class="animation-display">hover to see</div>
+        </div>
+        <div class="block">
+            <div>opacity ===></div>
+            <div class="animation-opacity">hover to see</div>
+        </div>
+        <div class="block">
+            <div>visibility ===></div>
+            <div class="animation-visibility">hover to see</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
