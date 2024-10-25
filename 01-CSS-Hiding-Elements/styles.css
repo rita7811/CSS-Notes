@@ -2,43 +2,69 @@ h2 {
     text-decoration: underline;
 }
 
+button {
+    cursor: pointer;
+}
+
+.container1 {
+    border: 1px solid black;
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+}
+
+.outer-box {
+    border: 1px dashed black;
+}
+
 .box {
     width: 200px;
     height: 100px;
     border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-#display-none {
+#display-none, .display-none {
     display: none;
 }
 
-#opacity-0 {
-    opacity: 0;
-}
-
-#visibility-hidden {
+#visibility-hidden, .visibility-hidden {
     visibility: hidden;
 }
 
+#opacity-0, .opacity-0 {
+    opacity: 0;
+}
+
 /*Child Elements*/
+.child-ele {
+    margin: 0;
+    background-color: grey;
+}
+
 .child {
     color: blue;
     font-weight: bold;
 }
 
-#child-display {
+#child-display, .display-block {
     display: block;
 }
 
-#child-opacity {
-    opacity: 1;
-}
-
-#child-visibility {
+#child-visibility, .visibility-visible {
     visibility: visible;
 }
 
-/*Animation*/
+#child-opacity, .opacity-1 {
+    opacity: 1;
+}
+
+
+/*Transition*/
 .block {
     padding: 4px;
     display: flex;
@@ -48,27 +74,27 @@ h2 {
 
 .animation-display {
     display: block;
-    transition: display 0.5s;
+    transition: display 0.5s linear 1s;
 }
 
 .animation-display:hover {
     display: none;
 }
 
-.animation-opacity {
-    opacity: 1;
-    transition: opacity 0.5s;
-}
-
-.animation-opacity:hover {
-    opacity: 0;
-}
-
 .animation-visibility {
     visibility: visible;
-    transition: visibility 0.5s;
+    transition: visibility 0.5s linear 1s;
 }
 
 .animation-visibility:hover {
     visibility: hidden;
+}
+
+.animation-opacity {
+    opacity: 1;
+    transition: opacity 0.5s linear 1s;
+}
+
+.animation-opacity:hover {
+    opacity: 0;
 }

@@ -6,63 +6,165 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css"/>
     <script src="event.js" defer></script>
 </head>
 <body>
-<h1>display: none vs opacity: 0 vs visibility: hidden</h1>
-<div>
-    <h2>Box</h2>
-    <div class="box" id="original-box">
+<h1>"display: none" vs. "visibility: hidden" vs. "opacity: 0"</h1>
+
+<h2>When Parent Elements aren't Hidden from the Screen</h2>
+<div class="container1">
+    <div>
         original-box
-        <button class="child" id="child-original">Click Child</button>
+        <div class="outer-box">
+            <div class="box original-box">
+                Parent Element
+                <p class="child-ele">Child Element</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        display: block
+        <div class="outer-box">
+            <div class="box display-block">
+                Parent Element
+                <p class="child-ele display-block">Child Element</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        visibility: visible
+        <div class="outer-box">
+            <div class="box visibility-visible">
+                Parent Element
+                <p class="child-ele visibility-visible">Child Element</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        opacity: 1
+        <div class="outer-box">
+            <div class="box opacity-1">
+                Parent Element
+                <p class="child-ele opacity-1">Child Element</p>
+            </div>
+        </div>
     </div>
 </div>
-<div>
-    <h2>Box 1 => display: none</h2>
-    <div class="box" id="display-none">
-        display-none
-        <button class="child" id="child-display">Click Child</button>
-    </div>
-</div>
-<div>
-    <h2>Box 2 => opacity: 0</h2>
-    <p>Click to see interactive ; hover a child element to see interactive</p>
-    <div class="box" id="opacity-0">
-        opacity-0
-        <button class="child" id="child-opacity">Click Child</button>
-    </div>
-</div>
-<div>
-    <h2>Box 3 => visibility: hidden</h2>
-    <div class="box" id="visibility-hidden">
-        visibility-hidden
-        <button class="child" id="child-visibility">Click Child</button>
-    </div>
-</div>
-<div>
-    <h2>Click Event Listener</h2>
-    <div id="clicked">
 
+<h2>When Parent Elements are Hidden from the Screen</h2>
+<div class="container1">
+    <div>
+        original-box
+        <div class="outer-box">
+            <div class="box original-box">
+                Parent Element
+                <p class="child-ele">Child Element</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        display: none
+        <div class="outer-box">
+            <div class="box display-none">
+                Parent Element
+                <p class="child-ele display-block">Child Element</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        visibility: hidden
+        <div class="outer-box">
+            <div class="box visibility-hidden">
+                Parent Element
+                <p class="child-ele visibility-visible">Child Element</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        opacity: 0
+        <div class="outer-box">
+            <div class="box opacity-0">
+                Parent Element
+                <p class="child-ele opacity-1">Child Element</p>
+            </div>
+        </div>
     </div>
 </div>
 
-<div>
-    <h2>CSS Animation</h2>
-    <div class="container">
-        <div class="block">
-            <div>display ===></div>
-            <div class="animation-display">hover to see</div>
-        </div>
-        <div class="block">
-            <div>opacity ===></div>
-            <div class="animation-opacity">hover to see</div>
-        </div>
-        <div class="block">
-            <div>visibility ===></div>
-            <div class="animation-visibility">hover to see</div>
+<h2>Example with Event Listener</h2>
+<p>Examples include a box as a parent element with a button as a child element inside the box.</p>
+<ul>
+    <li>Parent Element: Hover</li>
+    <li>Child Element: Click</li>
+    <li>Expected results:
+        <ul>
+            <li>Parent Element box changes to background color red on hover.</li>
+            <li>Child Element button prints "Child Element Clicked with times" when pressed.</li>
+        </ul>
+    </li>
+</ul>
+<div class="container1">
+    <div>
+        original-box
+        <div class="outer-box">
+            <div class="box" id="original-box">
+                Parent Element
+                <button class="child" id="child-original">Child Element</button>
+            </div>
         </div>
     </div>
+    <div>
+        display: none
+        <div class="outer-box">
+            <div class="box" id="display-none">
+                Parent Element
+                <button class="child" id="child-display">Child Element</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        visibility: hidden
+        <div class="outer-box">
+            <div class="box" id="visibility-hidden">
+                Parent Element
+                <button class="child" id="child-visibility">Child Element</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        opacity: 0
+        <div class="outer-box">
+            <div class="box" id="opacity-0">
+                Parent Element
+                <button class="child" id="child-opacity">Child Element</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>CSS Transition</h2>
+<div class="container1">
+    <div class="block">
+        <div>display ===></div>
+        <button class="animation-display">hover to see</button>
+    </div>
+    <div class="block">
+        <div>visibility ===></div>
+        <button class="animation-visibility">hover to see</button>
+    </div>
+    <div class="block">
+        <div>opacity ===></div>
+        <button class="animation-opacity">hover to see</button>
+    </div>
+</div>
+<div>
+    <p>Explanation:</p>
+    <ul>
+        <li>display property (from block to none): Transition Not Supported (added 1s delay does nothing)</li>
+        <li>visibility property (from visible to hidden): Instant transition after 1s delay</li>
+        <li>opacity property (from 1 to 0): Smooth transition with 0.5s duration after 1s delay</li>
+    </ul>
 </div>
 
 </body>
