@@ -13,6 +13,6 @@ Each subfolder dives into a specific CSS topic, providing notes and example code
 
 This section covers 3 different ways to hide HTML elements, focusing on `display: none`, `opacity: 0`, and `visibility: hidden`. 
 
-- Breaks down the differences in my article posted in Medium.
+- Breaks down the differences in my article posted in [Medium](https://medium.com/@simplyrita/how-to-hide-elements-in-css-display-opacity-and-visibility-explained-b99caac99410).
 - See the online code editor example posted in [CodePen](https://codepen.io/pen?template=poMdKXW).
 
